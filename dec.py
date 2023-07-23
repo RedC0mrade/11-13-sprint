@@ -19,7 +19,7 @@ class Deque:
     def push_back(self, value):
         """Добаавление значения в начало очереди"""
         if self.__size == self.__max_number_limit:
-            raise EmptyListError
+            raise QueueOverflowError
         self.__tail = self.__queue_count_function(self.__tail, -1)
         self.__gosh_queue[self.__tail] = value
         self.__size += 1
@@ -27,7 +27,7 @@ class Deque:
     def push_front(self, value):
         """Добаавление значения в начало очереди"""
         if self.__size == self.__max_number_limit:
-            raise EmptyListError
+            raise QueueOverflowError
         self.__head = self.__queue_count_function(self.__head, 1)
         self.__gosh_queue[self.__head] = value
         self.__size += 1
@@ -68,7 +68,7 @@ def main():
                 print(getattr(gosh_structure, i[0])())
             else:
                 getattr(gosh_structure, i[0])(int(i[1]))
-        except EmptyListError or QueueOverflowError:
+        except (EmptyListError, QueueOverflowError):
             print('error')
 
 
