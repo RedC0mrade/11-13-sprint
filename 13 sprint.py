@@ -37,7 +37,7 @@ def separation(results: list, left: int, right: int) -> int:
 
 
 def sorting(results: list, left=0, right=None) -> None:
-    """Функция сортировки."""
+    """Функция сортировки"""
     if right is None:
         right = len(results) - 1
     if left >= right:
