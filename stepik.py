@@ -1,1 +1,4 @@
-print(*[chr(i) for i in range(97, 123)], sep='\n')
+def convert(number):
+    return bin(number)[2:], oct(number)[2:], hex(number)[2:]
+
+print(convert(-24))
