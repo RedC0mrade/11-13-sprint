@@ -17,7 +17,7 @@ class Stack:
         return self.stack.append(data)
 
     def pop(self) -> int:
-        """Возващение и удаление последнего элемента"""
+        """Возващение и удаление последнего элемента."""
         if not self.stack:
             raise EmptyStackError
         return self.stack.pop()
