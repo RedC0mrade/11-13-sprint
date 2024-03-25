@@ -2,4 +2,3 @@ data = ['Timur', -16.648911695768902, 'six', -202, 883.0093275936454, -765, (3, 
 
 print(*(map(lambda x: int(x), filter(lambda x: type(x) in (int, float), data))), sep='\n')
 
-134124
